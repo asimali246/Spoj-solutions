@@ -31,35 +31,31 @@ typedef pair<ll, ll> llp;
 typedef pair<double, double> dd;
 typedef pair<char, int> ci;
 
-int t, n, i;
-ll b, x;
-
-void solve(ll &x, int i, ll mod)
-{
-	ll res=0;
-	while(i)
-	{
-		if(i&1)
-			res+=x, res%=mod;
-		x<<=1;
-		i>>=1;
-		x%=mod;
-	}
-	x=res;
+void mul(long long &x, int i, long long md) {
+  long long res = 0;
+  while (i > 0) {
+    if (i & 1) {
+      res += x;
+      if (res >= md) res -= md;
+    }
+    i >>= 1;
+    x <<= 1;
+    if (x >= md) x -= md;
+  }
+  x = res;
 }
-int main()
-{
-	scanf("%d", &t);
-	while(t--)
-	{
-		scanf("%d %lld", &n, &b);
-		x=1;
-		for(i=2;i<=n;++i)
-			solve(x, i, 2*b);
-		if(x>=b)
-			printf("ODD\n");
-		else
-			printf("EVEN\n");
-	}
-	return 0;
+ 
+int main() {
+  int tt;
+  cin >> tt;
+  while (tt--) {
+    int n;
+    long long b;
+    cin >> n >> b;
+    long long x = 1;
+    for (int i = 2; i <= n; i++) mul(x, i, 2 * b);
+    if (x >= b) puts("Odd");
+    else puts("Even");
+  }
+  return 0;
 }
