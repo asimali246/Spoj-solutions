@@ -56,7 +56,7 @@ int query(int id, int l, int r, int p) {
 	if( p <= t[lft] )
 		return query(lft, l, m, p);
 	else
-		return query(rgt, m + 1, r, p - t[id]);
+		return query(rgt, m + 1, r, p - t[lft]);
 }
 int main() {
 	scanf("%d", &T);
