@@ -75,7 +75,7 @@ int main() {
 				else {
 
 					tp = st.top() ; st.pop() ;
-					mx = h[tp] * ( st.empty() ? j - 1 : j - st.top() - 1) ; 
+					mx = h[tp] * ( st.empty() ? j - 1 : j - st.top() - 1); 
 					ans = max( ans, mx );
 				}
 			}
