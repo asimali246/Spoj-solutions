@@ -29,7 +29,7 @@
 template <typename X> X gcd(X a, X b){if(!b)return a; else return gcd(b, a%b);}
  
 typedef vector<int> vi;
-typedef pair<int, int> ii;
+typedef pair<int, int> ii ;
 
 const int N = 1e8 + 10;
 const int S = 10000;
