@@ -24,7 +24,7 @@ using namespace std;
 #define ll long long int
 #define INF 1000000000
 #define PI acos(-1.0)
-#define EPS 1e-9
+#define EPS 1e-9 
 
 
 template < typename X > X gcd( X a, X b ) { if( !b ) return a ; else return gcd(b, a%b) ; }
