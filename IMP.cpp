@@ -85,7 +85,7 @@ int main() {
 			take() ;
 			if( d == 0 ) 
 				q = 0 ;
-			else {
+			else{
 				double temp = (double) ( -p * b ) / (double) d ;
 				if( (p * b) % d == 0 ) 
 					temp -= 1.0 ;
